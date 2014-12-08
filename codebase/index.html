@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>If Then Else Game</title>
+        <link href='http://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+        <style>
+.title {
+	z-index: 300;
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	width: 600px;
+	height: 50px;
+	top: 50px;
+	font-family: 'Chango', cursive;
+	text-align: center;
+}
+.gamediv {
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	width: 600px;
+	height: 350px;
+	top: 100px;
+}
+#theend {
+	z-index: 150;
+	font-family: 'Chango', cursive;
+	text-align: center;
+	display: none;
+}
+#mydiv {
+	background-color: #efefef;
+	overflow: hidden;
+	box-shadow: 10px 10px 5px #888888;
+	background-image: url("images/grass.png");
+	background-repeat: repeat-x;
+	background-position: 0px 246px;
+}
+#myscript {
+	z-index: 200;
+	position: absolute;
+	padding: 10px;
+	left: 50px;
+	width: 200px;
+	height: 100px;
+	top: 50px;
+	color: green;
+	font-family: "Courier New";
+	background-color: #000;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#myscripts {
+	z-index: 200;
+	position: absolute;
+	padding: 10px;
+	left: 100%;
+	margin-left: -350px;
+	width: 300px;
+	height: 100px;
+	top: 50px;
+	color: green;
+	font-family: "Courier New";
+	background-color: #000;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#stuff {
+	z-index: 100;
+	background-image: url("images/wall.png");
+	background-repeat: no-repeat;
+	background-position: 800px 222px;
+}
+#myGame {
+	position: relative;
+	top: 0px;
+	left: 100px;
+}
+        </style>
+    </head>
+    <body style='background-color: #DDF'>
+    	<div class='title'>IF THEN ELSE GAME</div>
+		<div id='myscript'>
+WHILE(<a href='javascript:stopstart()' id='stopstart'>false</a>) {<br>
+&nbsp;&nbsp;IF  <a href='javascript:changeif()' id='myif'>wall</a><br>
+&nbsp;&nbsp;THEN <a href='javascript:changethen()' id='mythen'>kick</a><br>
+&nbsp;&nbsp;ELSE  <a href='javascript:changeelse()' id='myelse'>walk</a><br>
+} <button onclick='submitscript()' style='float: right;'>Submit</button>
+		</div>
+		<div id='myscripts'></div>
+		<div id='theend' class='gamediv'><br><br>THE END<br><br><a href='index.html'>Click here to play again</div>
+		<div id='stuff' class='gamediv'></div>
+		<div id='mydiv' class='gamediv'>
+			<canvas id="myGame"></canvas>
+		</div>
+        <script src="main.js"></script>
+    </body>
+</html>
